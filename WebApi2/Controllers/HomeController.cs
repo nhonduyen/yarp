@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebApi2.Model;
 
 namespace WebApi2.Controllers
@@ -16,7 +15,7 @@ namespace WebApi2.Controllers
             var result = new GetNumberResponse
             {
                 Result = Random.Shared.Next(0, int.MaxValue),
-                From = "from api2"
+                From = "api2"
             };
             return Ok(result);
         }
@@ -27,7 +26,7 @@ namespace WebApi2.Controllers
             var result = new GetNumberResponse
             {
                 Result = Random.Shared.Next(0, request.Number),
-                From = "from api2"
+                From = "api2"
             };
             return Ok(result);
         }
